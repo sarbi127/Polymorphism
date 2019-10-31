@@ -7,9 +7,9 @@ namespace Uppgift_3
     // interface
     class Animal : IAnimal
     {
-        private string Name { get; set; }
-        private int Weight { get; set; }
-        private int Age { get; set; }
+        public string Name { get; set; }
+        public int Weight { get; set; }
+        public int Age { get; set; }
 
         public Animal()
         {
@@ -34,16 +34,16 @@ namespace Uppgift_3
 
     class Horse : Animal
     {
-        private object horse;
+        //private object horse;
 
         public Horse(string name, int weight, int age): base(name, weight, age) { }
         public string HorseDisease { get; set; }
 
-        public string print()
-        {
+        //public string print()
+        //{
 
-            return $"HorseDisease: {horse}";
-        }
+        //    return $"HorseDisease: {horse}";
+        //}
         public override string Stats()
         {
 

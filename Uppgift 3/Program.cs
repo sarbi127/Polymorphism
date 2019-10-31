@@ -10,13 +10,12 @@ namespace Uppgift_3
         static void Main(string[] args)
         {
             var person1 = new Person();
-            var person2 = new Person();
-
             var personhandler = new PersonHandler();
             person1 = personhandler.CreatePerson(12, "sara", "Binazir", 160, 58);
             Console.WriteLine($" {person1.Age},  {person1.FName} , {person1.LName}, {person1.Height}, {person1.Weight} ");
             Console.WriteLine("...............................");
 
+            var person2 = new Person();
             personhandler.SetAge(person2, 20);
             personhandler.SetName(person2, "Rosa", "Rad");
             personhandler.SetWeight(person2, 70);
@@ -24,19 +23,30 @@ namespace Uppgift_3
             Console.WriteLine($" {person2.Age},  {person2.FName} , {person2.LName}, {person2.Height}, {person2.Weight} ");
             Console.WriteLine("...............................");
 
-            //Print out which animals are in the ​list ​with a ​foreach ​loop​.
-            var animal1 = new List<IAnimal>()
+            var personList = new List<Person>();
+            personList.Add(person1);
+            personList.Add(person2);
+
+            foreach (var v in personList)
             {
-                new Horse("horse", 12, 13),
-                new Dog("Dog", 12, 13),
-                new Pelican("Hedgehog", 12, 13),
-                new Flamingo("Hedgehog", 12, 13),
-                new Swan("Hedgehog", 12, 13),
-            };
+                Console.WriteLine($" {v.Age},  {v.FName} , {v.LName}, {v.Height}, {v.Weight} ");
+
+            }
+
+            Console.WriteLine("-------------");
+
+            //Print out which animals are in the ​list ​with a ​foreach ​loop​.
+            var animal1 = new List<Animal>();
+            animal1.Add(new Horse("horse", 12, 13));
+            animal1.Add(new Dog("Dog", 12, 13));
+            animal1.Add(new Pelican("Hedgehog", 12, 13));
+            animal1.Add(new Flamingo("Flamingo", 12, 13));
+            animal1.Add(new Swan("Swan", 12, 13));
+
 
             foreach (var v in animal1)
             {
-                Console.WriteLine(v);
+                Console.WriteLine($"{v.Name} , {v.Age}  , {v.Weight} ");
                 Console.WriteLine("-------------");
             }
 
@@ -47,17 +57,16 @@ namespace Uppgift_3
             // Q8. Animal.
 
             //Try to print out all ​Animals Stats()​ using a ​foreach ​loop.
-            var animal2 = new List<IAnimal>()
-            {
-                new Horse("horse", 12, 13),
-                new Dog("Dog", 12, 13),
-                new Hedgehog("Hedgehog", 12, 13),
-                new Bird("Hedgehog", 12, 13),
-                new Pelican("Hedgehog", 12, 13),
-                new Flamingo("Hedgehog", 12, 13),
-                new Swan("Hedgehog", 12, 13),
+            var animal2 = new List<IAnimal>();
+            animal2.Add(new Horse("horse", 12, 13));
+            animal2.Add(new Dog("Dog", 12, 13));
+            animal2.Add(new Hedgehog("Hedgehog", 12, 13));
+            animal2.Add(new Bird("Hedgehog", 12, 13));
+            animal2.Add(new Pelican("Hedgehog", 12, 13));
+            animal2.Add(new Flamingo("Hedgehog", 12, 13));
+            animal2.Add(new Swan("Hedgehog", 12, 13));
 
-            };
+           
 
             foreach (var v in animal2)
             {
