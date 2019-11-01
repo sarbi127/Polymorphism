@@ -11,17 +11,16 @@ namespace Uppgift_3
     /// </summary>
     class Person
     {
-        private int age;
+      //  private int age;
         public int Age
         {
-            //get { return age; }
-            //set { age = value; }
+
             get;
             set;
         }
 
 
-        private string fName;
+        //private string fName;
         public string FName
         {
             //get { return fName; }
@@ -31,7 +30,7 @@ namespace Uppgift_3
         }
 
 
-        private string lName;
+        //private string lName;
         public string LName
         {
             //get { return lName; }
@@ -40,7 +39,7 @@ namespace Uppgift_3
             set;
         }
 
-        private double height;
+        //private double height;
         public double Height
         {
             //    get { return height; }
@@ -50,6 +49,19 @@ namespace Uppgift_3
             set;
         }
         private double weight;
+
+        public Person(int age, string fname, string lname, double height, double weight)
+        {
+            this.Age = age;
+            FName = fname;
+            LName = lname;
+            this.Height = height;
+            this.Weight = weight;
+        }
+        public Person()
+        {
+
+        }
 
         public double Weight
         {
@@ -70,23 +82,11 @@ namespace Uppgift_3
         //create CreatePerson and set age, fname, lname, height, weight
         public Person CreatePerson(int age, string fname, string lname, double height, double weight​)
         {
-            var person = new Person();
-            person.Age = age;
-            person.FName = fname;
-            person.LName = lname;
-            person.Height = height;
-            person.Weight = weight;
 
-           // Console.WriteLine($" {person.Age},  {person.FName} , {person.LName}, {person.Height}, {person.Weight}  ");
-            return (person);
+            // return($" {person.Age},  {person.FName} , {person.LName}, {person.Height}, {person.Weight}  ");
+            return new Person(age, fname, lname, height, weight);
+           
         }
-
-        //public Person GetPerson(​)
-        //{
-            
-        //    var person = new Person();
-        //    //return $" {person.Age},  {person.FName} , {person.LName}, {person.Height}, {person.Weight} ";
-        //}
 
         //set person age
         public void SetAge(Person pers, int age)
@@ -118,6 +118,8 @@ namespace Uppgift_3
 
 
         }
+
+        
 
 
 

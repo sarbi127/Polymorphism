@@ -7,7 +7,6 @@ namespace Uppgift_3
     abstract class UserError
     {
         public abstract string UEMessage();
-
     }
 
     class NumericInputError : UserError

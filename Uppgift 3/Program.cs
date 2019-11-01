@@ -36,17 +36,16 @@ namespace Uppgift_3
             Console.WriteLine("-------------");
 
             //Print out which animals are in the ​list ​with a ​foreach ​loop​.
-            var animal1 = new List<Animal>();
-            animal1.Add(new Horse("horse", 12, 13));
-            animal1.Add(new Dog("Dog", 12, 13));
-            animal1.Add(new Pelican("Hedgehog", 12, 13));
-            animal1.Add(new Flamingo("Flamingo", 12, 13));
-            animal1.Add(new Swan("Swan", 12, 13));
-
+            var animal1 = new List<Animal>()
+            {
+            new Horse("horse", 12, 13, "HorseDisease"),
+            new Dog("Dog", 12, 1, "DogDisease"),
+            new Pelican("Pelican", 12, 13, "PelicanDisease"),
+            };
 
             foreach (var v in animal1)
             {
-                Console.WriteLine($"{v.Name} , {v.Age}  , {v.Weight} ");
+                Console.WriteLine(v);
                 Console.WriteLine("-------------");
             }
 
@@ -58,13 +57,12 @@ namespace Uppgift_3
 
             //Try to print out all ​Animals Stats()​ using a ​foreach ​loop.
             var animal2 = new List<IAnimal>();
-            animal2.Add(new Horse("horse", 12, 13));
-            animal2.Add(new Dog("Dog", 12, 13));
-            animal2.Add(new Hedgehog("Hedgehog", 12, 13));
-            animal2.Add(new Bird("Hedgehog", 12, 13));
-            animal2.Add(new Pelican("Hedgehog", 12, 13));
-            animal2.Add(new Flamingo("Hedgehog", 12, 13));
-            animal2.Add(new Swan("Hedgehog", 12, 13));
+            animal2.Add(new Horse("horse", 12, 13, "HorseDisease"));
+            animal2.Add(new Dog("Dog", 12, 13, "DogDisease"));
+            animal2.Add(new Hedgehog("Hedgehog", 12, 13, "HedgehogDisease"));
+            animal2.Add(new Pelican("Pelican", 12, 13, "PelicanDisease"));
+            animal2.Add(new Flamingo("Flamingo", 12, 13, "FlamingoDisease"));
+            animal2.Add(new Swan("Swan", 12, 13, "SwanDisease"));
 
            
 
@@ -87,7 +85,6 @@ namespace Uppgift_3
             }
 
             // Q13. because the list have different animals not only Dog
-
             // ​Speak()​-method on all dogs in the ​Animals ​listusing a ​foreach ​loop.
             foreach (var v in animal2)
             { 
@@ -147,6 +144,8 @@ namespace Uppgift_3
             // 3.When inheriting an abstract class, a concrete child class must define the abstract methods.
             // 4.A child class can only extend a single class (abstract or concrete), whereas an interface can extend 
             //or a class can implement multiple other interfaces.
+
+
 
         }
 
